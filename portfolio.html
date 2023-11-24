@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - MERN Stack Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        nav {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    
+}
+
+
+        .navbar-brand {
+            color: #000000;
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #000000;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2em 0;
+            height: 600px;
+            background-color: rgb(0, 0, 0);
+            /* width: 1530px; */
+            /* background-image: url(./portfolioimges/background4.jpg); */
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 70px;
+        }
+        #dp img{
+            height: 145px;
+            width: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: 0.5s ease;
+            cursor: pointer;
+            filter: grayscale(100%);
+            margin-left: 45%;
+            border: 6px solid white;
+        }
+        #dp img:hover{
+            transform: scale(1.3);
+            filter: grayscale(0);
+            border: none;
+            box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.501);
+        }
+       
+
+        section {
+            max-width: 100%;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: rgb(66, 148, 144);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            font-family: 'Geologica', sans-serif;
+font-family: 'Noto Sans Kawi', sans-serif;
+font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            line-height: 2.4;
+            color: #000000;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+            padding-left: 30px;
+            
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        li a h6{
+            color: #000000;
+            font-weight: 600;
+            padding: 6px 10px 5px 10px;
+            border: 1px solid black;
+            margin-top: 20px;
+            border-radius: 35px;
+            transition: 0.5s ease ;
+        }
+        li a h6:hover{
+            transform: scale(1.2);
+            color: white;
+            background-color: black;
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Additional styles for Bootstrap cards */
+        /* .card {
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .card:hover{
+            color: white;
+            background-color: black;
+         
+            transform: scale(1.1);
+        } */
+        .card {
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+    margin-right: 50px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+    color: white;
+}
+
+        form {
+            margin-top: 20px;
+        }
+        .skills {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+          
+        }
+
+        .skill-box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 8px;
+            margin: 4px;
+            margin-left: 110px;
+            background-color: white;
+            font-weight: 550;
+           
+
+        
+        }
+        .skill-box:hover{
+            color: white;
+            background-color: black;
+            transform: scale(1.3);
+            
+        }
+        
+        #mywork .col-md-4 img{
+            height: 200px;
+            width: 300px;    
+           /* padding: 10px; */
+           border-radius: 20px;
+    
+           transition: 0.5s ease;
+           cursor: pointer;
+     
+           
+        
+        }
+        
+        #mywork .col-md-4 img:hover{
+            transform: scale(1.4);
+            box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.501);
+       
+          
+
+        }
+        /* #aboutme img {
+            height: 200px;
+            width: 155px;
+            border-radius: 40px;
+           margin-left: 280px;
+          
+           outline: 2px solid black;
+        } */
+        #mywork  img{
+            margin-left:   100px;
+        }
+        #linkdin a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+
+        }
+        #linkdin a:hover{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            transform: scale(1.1);
+            
+        }
+        #emaill a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+            
+
+        }
+        #emaill a:hover{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            transform: scale(1.1);
+            
+        }
+        #github a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+
+        }
+        #github a:hover{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            transform: scale(1.1);
+            
+        }
+       .navbar-nav ml-auto  li .nav-item  {
+      padding: 140px;
+      margin-left: 40px;
+       }
+
+      
+
+       
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="height: 50px;">
+        <a class="navbar-brand" href="#"><h6 style="font-weight: 600; font-size: 40px;">Portfolio</h6> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#"><h6>Home </h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutme"><h6>About</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services"><h6>Services</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills"><h6>Skills</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mywork"><h6>MyWorks</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><h6>Contact</h6></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <div class="outlinrbox" style="height: 350px; width: 900px; border: 4px solid white;">
+            <div style="margin-top: 100px;"><h1 style="color: white; font-weight: 700; font-size: 70px;">HI,I'M AKSHAY M R</h1>
+                <h4 style="color: white;">MERN Stack Developer</h4></div>
+        </div>
+    </header>
+ <br><br>
+    <section id="aboutme" >
+        <br>
+        <h2 style=" font-weight: 900; ">ABOUT ME</h2>
+        <br><br>
+        <a href="" class="" id="dp"><img src="./portfolioimges/profile.jpeg" alt="" srcset=""></a>
+        <br><br>
+
+        <p style="color: rgb(255, 255, 255); text-align: center; margin-left: 200px;margin-right: 200px;">Hi, I'm Akshay M R, a passionate MERN stack developer with a strong foundation in web development.I recently completed my UG in Bachelor of Computer Applications.Currently I'm working as an Inter at Softronics.As a MERN stack enthusiast, I specialize in building dynamic and responsive web applications using MongoDB, Express.js, React.js, and Node.js. I thrive on creating seamless user experiences and solving complex problems through elegant, efficient, and well-documented code.</p>
+    <br></section>
+    <br><br>
+
+    <section id="services">
+        <br><br>
+        <h2  style=" font-weight: 700;">What I Can Do for You</h2><br>
+        <div class="card-deck">
+           
+            <div class="card " >
+                <div class="card-body">
+                    <h5 class="card-title  text-center" style="font-weight: 700;">Website Design</h5>
+                    <p class="card-text  text-center">Create visually appealing and <br> user-friendly website designs that <br>reflect your
+                        brand identity.</p>
+                </div>
+            </div>
+
+           
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title  text-center" style="font-weight: 700;" >Web Development</h5>
+                    <p class="card-text  text-center">Build responsive and dynamic <br> web applications using the <br> latest technologies and
+                        best practices.</p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center"style="font-weight: 700;">Managing Complex Data</h5>
+                    <p class="card-text text-center">Develop robust solutions for <br> handling and managing complex  <br> data in your
+                        applications.</p>
+                        </div>
+                    </div>
+                  </div>
+                    <br><br>
+                </section>
+                <br><br>
+                <section>
+                    <br>
+                    <h2 id="skills" style=" font-weight: 700;">Skills</h2>
+                    <br>
+                    <br>
+                    <ul class="skills" >
+                        <li class="skill-box">HTML</li>
+                        <li class="skill-box">CSS</li>
+                        <li class="skill-box">JavaScript</li>
+                        <li class="skill-box">React.js</li>
+                        <li class="skill-box">Node.js</li>
+                        <li class="skill-box">Express.js</li>
+                        <li class="skill-box">MongoDB</li>
+                        
+                      
+                    </ul>
+                    <br><br>
+                </section>
+                <br><br>
+                <section id="mywork">
+                    <br><h2 id="skills" style=" font-weight: 700;">My Works</h2>
+                    <br>
+                    
+    <h5 style="font-weight: 500; color: #f0f0f0; text-align: center;">These are some of my works. Feel free to check out more on my GitHub profile.</h5>
+    
+                    <br><br><br>
+                    <div class="row">
+                        <div class="col-md-4"><img src="./portfolioimges/Screenshot 2023-11-23 101330.png" alt="" srcset=""></div>
+                        <div class="col-md-4"><img src="./portfolioimges/Screenshot 2023-11-23 101341.png" alt="" srcset=""></div>
+                        <div class="col-md-4"><img src="./portfolioimges/Screenshot 2023-11-23 101352.png" alt="" srcset=""></div>
+                    </div>
+                    <br><br><br>
+                    <div class="row">
+                        <div class="col-md-4"><img src="./portfolioimges/Screenshot 2023-11-23 101404.png" alt="" srcset=""></div>
+                        <div class="col-md-4"><img src="./portfolioimges/Screenshot 2023-11-23 101426.png" alt="" srcset=""></div>
+                        <div class="col-md-4"><img src="./portfolioimges/Screenshot 2023-11-23 101453.png" alt="" srcset=""></div>
+                    </div>
+                    <br><br>
+                </section>
+            <br><br>
+                <section id="contact">
+                    <h2  style=" font-weight: 700;">Contact Me</h2><br>
+                    <form>
+                        <div class="form-group">
+                            <label for="name"><h6 style="font-weight: 700;">Name:</h6></label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                    </form>
+            
+                  
+                    <form>
+                        <div class="form-group">
+                            <label for="email"><h6 style="font-weight: 700;">Email:</h6></label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                    </form>
+                    <br><br>
+                    <p style="color: #ffffff; font-weight: 600; text-align: center;">If you have a project in mind or just want to say hi, feel free to reach out to me.</p>
+                    <p style="color: #000000; font-weight: 500; " id="emaill"><a href="" ><img src="./portfolioimges/email.png" alt="" srcset=""style="height: 2rem; width: 2rem;">: <a href=""> akshaymr83@gmail.com</a></a></p>
+                    <p style="color: #000000; font-weight: 500;" id="linkdin"><a href="" ><img src="./portfolioimges/linkedin-logo.png" alt="" srcset=""style="height: 2rem; width: 2rem;"> :<a href="https://www.linkedin.com/in/akshay-m-r-72960b285" target="_blank">linkedin.com/in/akshay-m-r-72960b285</a></p>
+                    <p style="color: #000000; font-weight: 500;" id="github"><a href="" ><img src="./portfolioimges/github-sign.png" alt="" srcset=""style="height: 2rem; width: 2rem;"></a>: <a href="https://github.com/Akshaymr83" class="" >github.com/Akshaymr83</a></p>
+                </section>
+            
+                <footer>
+                    &copy; 2023 Akshay M R- MERN Stack Developer
+                </footer>
+            
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            
+                    
+              
